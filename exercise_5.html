@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions! (Five)</title>
+</head>
+<body>
+	<script>
+		var sum = 0;
+		var number = 0;
+
+		function addToAverage(num) {
+			sum = sum + num;
+			number = number + 1;
+		}
+
+		function getAverage() {
+			return sum / number;
+		}
+
+		/*
+			TODO: Using the functions above, compute and print the average of:
+			13, 4, 134, 21, 30
+		*/
+
+		// add each number to the 'addToAverage' function
+		addToAverage(13); 
+		addToAverage(4);
+		addToAverage(134);
+		addToAverage(21);
+		addToAverage(30);
+		
+		// Now get the average of the above numbers that were calculated
+		console.log( getAverage());
+
+		
+		//	Optional: Create a function which averages an array of numbers
+
+		sum = 0; // reset the variable
+		number = 0; // reset the variable
+
+		var numArr = [13, 4, 134, 21, 30]; // create array from set of numbers
+
+		function sumArray(numArr) {
+			for(var i = 0; i < numArr.length; i++) { // loop through array of numbers
+				 sum = sum + numArr[i]; // sum the elements of the array
+				 number = number + 1; // get the next number
+			}
+		}
+
+		sumArrary(numArr); // call the array to sum the numbers*****************************
+
+		console.log( getAverage(numArr));
+
+		//	Optional: Create a variadic funciton which averages all of its arguments
+
+		// Variadic - undefined amount of functions -  does not pay attention to the amount of arguments even if the parameters are limited 
+
+
+		sum = 0; // reset the variable
+		number = 0; // reset the variable
+
+		function sum( ) {
+			var sumSoFar = 0;
+			for(var i = 0; i < arguments.length; i++) {
+				sumSoFar = sumSoFar + arguments[i];
+
+			}
+			return sumSoFar;
+		}	
+		console.log( sum (3, 5, 10, 24, 12) );
+
+
+	</script>
+</body>
+</html>

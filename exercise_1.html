@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions!</title>
+</head>
+<body>
+    <script>
+        /*
+            Exercise One:
+            Replace each "?" with one letter, so that this program prints
+
+            a
+            b
+            c
+            d
+            e
+
+            in order.
+        */
+        function first() {
+            console.log('a');
+            second(); // Call to 'second' function
+            console.log('e');
+        }
+        function second() {
+            console.log('b');
+            third(); // Call to 'third' function
+            console.log('d');
+        }
+        function third() {
+            console.log('c');
+        }
+
+        first(); // call first function -- 1st line of actually running code
+    </script>
+</body>
+</html>
